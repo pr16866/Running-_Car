@@ -1,0 +1,127 @@
+ * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-y: hidden;
+  }
+
+  .city-outer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(-360deg, rgb(143, 255, 245), rgb(247, 186, 74));
+    
+
+  } 
+
+  /* |||||||||||||| This is for sun ||||||||| */
+   .city-outer::before {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 3em;
+    content: "";
+    background: radial-gradient(rgba(230, 222, 222, .25), rgba(230, 222, 222, .25));
+  }
+   /* ||||||||||||||||| This is for Cloud |||||||||||||||  */
+  .cloud{
+    background: url(cloud.png);
+    background-repeat: repeat-x;
+    height: 160px;
+    margin-top: 3em;
+  }
+     /* ||||||||||||||||| This is for Road |||||||||||||||  */
+  .city-inner{
+       background: url(way.png);
+       width: 500%;
+       height: 650px;
+       position: absolute;
+       bottom: 0;
+       background-repeat: repeat-x;
+
+  }
+     /* ||||||||||||||||| This is for Car |||||||||||||||  */
+  .car{
+    position: absolute;
+    bottom: 7%;
+    left: 15%;
+    
+  }
+  @keyframes cloud {
+    100%{
+      transform: translateX(1200px);
+       opacity: .4;
+    }
+  }
+  @keyframes city {
+    100%{
+      transform: translateX(-2500px);
+      
+    }
+  }
+  @keyframes car {
+    100%{
+      transform: translateY(-2px);
+      
+    }
+    50%{
+      transform: translateY(1px);
+      
+    }
+    0%{
+      transform: translateX(-2px);
+  }
+} 
+.day_to_night{
+background: linear-gradient(180deg,rgb(16,17,29),rgb(0,16,53));
+}
+.car1{
+    animation: car 1s linear infinite;
+}
+.city-inner1{
+    animation: city 5s linear infinite;
+} 
+.cloud1{
+    animation: cloud 9s linear infinite;
+}
+
+.timer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.time{
+  position: relative;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  height: 300px;
+  background-color: rgb(0, 0, 0,0.8);
+  color: white;
+  word-spacing: 10px;
+  z-index: 8;
+  text-align: center;
+}
+span{
+  color: rgb(96, 194, 233);
+  margin: 0 15px;
+}
+.time p{
+  font-size: 20px;
+}
+
